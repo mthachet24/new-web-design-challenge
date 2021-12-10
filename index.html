@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <div class="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" style="background-color: rgb(255,255,255);" href="index.html">Weather and Latitude</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PLOTS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Visualizations/temperature.html">Max Temperature</a>
+                            <a class="dropdown-item" href="Visualizations/humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="Visualizations/cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="Visualizations/wind.html">Wind Speed</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Visualizations/comparison.html">COMPARISON</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Visualizations/data.html">DATA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/mthachet24/new-web-design-challenge">REPO</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <div class="box" style="padding-bottom: 20px;">
+                    <h3 class="title">Summary: Latitude vs. Different Climate Factors <br> (Max Temperature Visual)</h3>
+                    <hr>
+                    <img src="Images/Latitude_temperature.png" class="vizualization rounded float-left" alt="Max Temperature Graph">
+                    <p> I analyzed weather patterns based on distance to the equator. I utilized Python script to visualize the weather of 500+ cities across the world of varying distance from the equator.I utilized a simple Python library, the OpenWeatherMap API, to create representative models of weather across world cities.</p>
+                      <br>
+                    <p> I first assembled a dataset of more than 500 cities using the citipy python library and python to randomly generate coordinates to get the nearest city. Then I used this list of cities to get the weather using the OpenWeatherMap API. Using MatPlotLib, I used each city's maximum temperature, humidity, cloudiness, or wind speed and plotted the data with the latitude on the appropriate graphs.</p>
+                      <br>
+                    <p> The result is shown in depth on each visualization page.</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="box">
+                    <h3 class="title">Visualizations</h3>
+                    <hr>
+                    <div class="container">
+                        <div class="row" style="padding-bottom: 70px;">
+                            <div class="col-6">
+                                <div class="title">Latitude vs. Max Temperature</div>
+                                <a href="Visualizations/temperature.html">
+                                <img class="panel" src="Images/Latitude_temperature.png" alt="Max Temperature Graph">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <div class="title">Latitude vs. Humidity</div>
+                                <a href="Visualizations/humidity.html">
+                                <img class="panel" src="Images/Latitude_humidity.png" alt="Humidity Graph">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-bottom: 70px;">
+                            <div class="col-6">
+                                <div class="title">Latitude vs. Cloudiness</div>
+                                <a href="Visualizations/cloudiness.html">
+                                <img class="panel" src="Images/Latitude_cloudiness.png" alt="Cloudiness Graph">
+                                </a>
+                                <!-- <div class="title">vs. Cloudiness</div> -->
+                            </div>
+                            <div class="col-6">
+                                <div class="title">Latitude vs. Wind Speed</div>
+                                <a href="Visualizations/wind.html">
+                                    <img class="panel" src="Images/Latitude_wind.png" alt="Wind Speed Graph">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
